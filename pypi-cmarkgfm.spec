@@ -4,7 +4,7 @@
 #
 Name     : pypi-cmarkgfm
 Version  : 0.8.0
-Release  : 27
+Release  : 28
 URL      : https://files.pythonhosted.org/packages/b2/e6/2b0dc26ce2fa72b583d17e4f86ef01a378c296390293bc88df1a950c6065/cmarkgfm-0.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b2/e6/2b0dc26ce2fa72b583d17e4f86ef01a378c296390293bc88df1a950c6065/cmarkgfm-0.8.0.tar.gz
 Summary  : Minimal bindings to GitHub's fork of cmark
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1646510221
+export SOURCE_DATE_EPOCH=1649729003
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
