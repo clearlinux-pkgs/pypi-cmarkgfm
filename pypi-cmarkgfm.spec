@@ -4,7 +4,7 @@
 #
 Name     : pypi-cmarkgfm
 Version  : 2022.10.27
-Release  : 36
+Release  : 37
 URL      : https://files.pythonhosted.org/packages/94/29/b3c6f8bcaf9332e337f3ac178c3dd729e7148d2a478272779dd33f87b729/cmarkgfm-2022.10.27.tar.gz
 Source0  : https://files.pythonhosted.org/packages/94/29/b3c6f8bcaf9332e337f3ac178c3dd729e7148d2a478272779dd33f87b729/cmarkgfm-2022.10.27.tar.gz
 Summary  : Minimal bindings to GitHub's fork of cmark
@@ -17,6 +17,9 @@ Requires: pypi-cmarkgfm-python = %{version}-%{release}
 Requires: pypi-cmarkgfm-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(cffi)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 cmarkgfm - Python bindings to GitHub's cmark
@@ -81,15 +84,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666838093
+export SOURCE_DATE_EPOCH=1672263882
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
