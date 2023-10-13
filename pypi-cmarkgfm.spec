@@ -5,7 +5,7 @@
 #
 Name     : pypi-cmarkgfm
 Version  : 2022.10.27
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/94/29/b3c6f8bcaf9332e337f3ac178c3dd729e7148d2a478272779dd33f87b729/cmarkgfm-2022.10.27.tar.gz
 Source0  : https://files.pythonhosted.org/packages/94/29/b3c6f8bcaf9332e337f3ac178c3dd729e7148d2a478272779dd33f87b729/cmarkgfm-2022.10.27.tar.gz
 Summary  : Minimal bindings to GitHub's fork of cmark
