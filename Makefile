@@ -1,5 +1,5 @@
 PKG_NAME := pypi-cmarkgfm
-URL = https://files.pythonhosted.org/packages/7d/57/0480532cf04f77ff6f34985109079e87b9028444540731a5380abd0a3325/cmarkgfm-2024.1.14.tar.gz
+URL = https://files.pythonhosted.org/packages/44/df/99c139c587d1fb1633b8adb22a44c8ab6b002453ed4f97ceefb1759eacdf/cmarkgfm-2024.11.20.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
